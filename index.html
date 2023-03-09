@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+	<title>VEED Travel</title>
+    <style type="text/css">
+        body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    </style>
+</head>
+<body>
+    <!-- header section -->
+	<header>
+		<navbar class="container">
+            <div class="navbar">
+                <img class="logo" src="https://t4.ftcdn.net/jpg/04/06/91/91/360_F_406919161_J0pGxe1sewqnk5dnvyRS77MKmEd6SVac.jpg" alt="">
+                <div class="menu">
+                    <a class="menu-btn" href="#home">Home</a>
+                    <a class="menu-btn" href="#our-package">Our Package</a>
+                    <a class="menu-btn" href="#callus">Call Us</a>
+                </div>
+            </div>
+		</navbar>
+	</header>
+	<!-- main section-->
+	<main>
+        <section id="home">
+            <div class="container">
+                <div class="home-title">
+                    <h1>VEED Travel</h1>
+                     <h6>Warnai Liburanmu Bersama Keluarga</h6>
+                </div>
+            </div>
+        </section>
+        <!-- about contect -->
+        <section id="about-contact">
+            <div class="container">
+                <div class="about-contact">
+                    <!-- about -->
+                    <div class="about">
+                        <!--image slider -->
+                        <div class="slider">
+                            <div class="slides">
+                            <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                            <input type="radio" name="radio-btn" id="radio3">
+                            <input type="radio" name="radio-btn" id="radio4">
+                            <!--slide images -->
+                            <div class="slide first">
+                                <img src="img/slide1.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="img/slide2.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="img/slide3.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="img/slide4.jpg" alt="">
+                            </div>
+                            <div class="navigation-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                                <div class="auto-btn4"></div>
+                            </div>
+                            </div>
+                        </div>    
+                        <!-- script javascript auto slider -->
+                        <script type="text/javascript">
+                        var counter = 1;
+                        setInterval(function(){
+                            document.getElementById('radio' + counter).checked = true;
+                            counter++;
+                            if(counter > 4){
+                            counter = 1;
+                            }
+                        }, 3500);
+                        </script>
+                        <!-- backup foto saja tanpa slider -->
+                        <!--<img class="about-img" src="slide1.jpg" alt=""/>-->
+                        <div class="about-content">
+                            <br>
+                            <div class="content-caption">
+                                <p style="text-align: center"><i>"Liburan sebelum menyambut skripsi, liburan seru bersama VEED Travel!"</i></p>
+                            </div>
+                            <br>
+                            <div class="content-profil">
+                                <img src="img/dp1.jpg" width="60px" height="60%" alt="">
+                                <div class="info-profil">
+                                    <h6><b>Hafidh Ichwansyah Yahya</b></h6>
+                                    <p>Mahasiswa, 22</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="border-about"/>
+                        <br>
+                        <br>
+                        <div class="about-information">
+                            <h4 class="information-title">
+                                <b>Mengapa memilih jasa kami?</b>
+                            </h4>
+                            <br>
+                            <div class="list-information">
+                                <ul class="information-list">
+                                    <li>
+                                        <div class="list-number">1</div>
+                                        <p class="list-paragraf">Izin Usaha yang kredibel.</p>
+                                    </li>
+                                    <li>
+                                        <div class="list-number">2</div>
+                                        <p class="list-paragraf">Bermitra dengan perusahaan nasional.</p>
+                                    </li>
+                                    <li>
+                                        <div class="list-number">3</div>
+                                        <p class="list-paragraf">Dilayani oleh staff ahli.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- contact us form -->
+                    <div class="contact">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2></h2>
+                                <br>
+                                <p>Menginginkan Informasi Liburan Menarik? Kami akan menghubungi anda melalui e-mail.</p>
+                            </div>
+                            <form name="formContact" action="" onsubmit="return validateForm()">
+                                <div class="input">
+                                    <label for="">Your Name</label>
+                                    <input type="text" name="name">
+                                </div>
+                                <br>
+                                <div class="input">
+                                    <label for="">Your Email</label>
+                                    <input type="text" name="email">
+                                </div>
+                                <br>
+                                <div class="input">
+                                    <label for="">What are you interested in?</label>
+                                    <select name="interested" id="">
+                                        <option value="">- Select -</option>
+                                        <option value="">Bali</option>
+                                        <option value="">Bunaken</option>
+                                        <option value="">Labuan Bajo</option>
+                                        <option value="">Raja Ampat</option>
+                                        <option value="">Mentawai</option>
+                                        <option value="">Pulau Komodo</option>
+                                        <option value="">Berikan Tawaran Apapun</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="input">
+                                    <input type="submit" value="Send">
+                                </div>
+                        </div>
+                    </div>
+                    <!-- javascript validasi form -->
+                    <script>
+                        function validateForm() {
+                            if (document.forms["formContact"]["name"].value == "") {
+                                alert("Name cannot be empty!");
+                                document.forms["formContact"]["name"].focus();
+                                return false;
+                            }
+                            if (document.forms["formContact"]["email"].value == "") {
+                                alert("E-mail cannot be empty!");
+                                document.forms["formContact"]["email"].focus();
+                                return false;
+                            }
+                            if (document.forms["formContact"]["interested"].selectedIndex < 1) {
+                                alert("Choose your interested!");
+                                document.forms["formContact"]["interested"].focus();
+                                return false;
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+        <br>
+        <!-- our package -->
+        <section id="our-package">
+            <div class="container">
+                <div class="our-package">
+                    <h1>OUR PACKAGE</h1>
+                </div>
+            </div>
+        </section>
+        <!-- our package list -->
+        <section class="main-container">
+            <div class="card-container">
+              <div class="pricing-card card-01">
+                <div class="pricing">
+                  <div class="price">
+                    <sup></sup>
+                    <span>BALI</span>
+                  </div>
+                  <p></p>
+                  <span class="type">Rp1.349.000</span>
+                </div>
+                <div class="card-body">
+                  <div class="top-shape"></div>
+                  <div class="card-content">
+                    <ul>
+                      <li class="active">Start: Bandara Ngurah Rai <i class="uil uil-check-circle"></i></li>
+                      <li class="active">Konsumsi 3x/Hari <i class="uil uil-check-circle"></i></li>
+                      <li class="active">Hotel Bintang 3 <i class="uil uil-times-circle"></i></li>
+                      <li class="active">Transportasi <i class="uil uil-times-circle"></i></li>
+                      <li class="active">Fotografer <i class="uil uil-times-circle"></i></li>
+                    </ul>
+                    <button class="buy-btn">BOOK NOW</button>
+                  </div>
+                </div>
+              </div>
+              <div class="pricing-card card-02">
+                <div class="pricing">
+                  <div class="price">
+                    <sup></sup>
+                    <span>LABUAN BAJO</span>
+                  </div>
+                  <p></p>
+                  <span class="type">Rp2.900.000</span>
+                </div>
+                <div class="card-body">
+                  <div class="top-shape"></div>
+                  <div class="card-content">
+                    <ul>
+                      <li class="active">Start: Bandara Komodo <i class="uil uil-check-circle"></i></li>
+                      <li class="active">Konsumsi 3x/Hari <i class="uil uil-check-circle"></i></li>
+                      <li class="active">Hotel Bintang 3 <i class="uil uil-check-circle"></i></li>
+                      <li class="active">Transportasi <i class="uil uil-times-circle"></i></li>
+                      <li class="active">Fotografer <i class="uil uil-times-circle"></i></li>
+                    </ul>
+                    <button class="buy-btn">BOOK NOW</button>
+                  </div>
+                  <div class="ribbon"></div>
+                </div>
+              </div>
+              <div class="pricing-card card-03">
+                <div class="pricing">
+                  <div class="price">
+                    <sup></sup>
+                    <span>RAJA AMPAT</span>
+                  </div>
+                  <p></p>
+                  <span class="type">Rp6.900.000</span>
+                </div>
+                <div class="card-body">
+                  <div class="top-shape"></div>
+                  <div class="card-content">
+                    <ul>
+                      <li class="active">Start: Bandara DEO Sorong <i class="uil uil-check-circle"></i></li>
+                      <li class="active">Konsumsi 3x/Hari <i class="uil uil-check-circle"></i></li>
+                      <li class="active">Hotel Bintang 3 <i class="uil uil-check-circle"></i></li>
+                      <li class="active">Transportasi <i class="uil uil-check-circle"></i></li>
+                      <li class="active">Fotografer <i class="uil uil-check-circle"></i></li>
+                    </ul>
+                    <button class="buy-btn">BOOK NOW</button>
+                  </div>
+                </div>
+                <div class="ribbon"></div>
+              </div>
+            </div>
+        </section>
+        <br>
+        <!-- contact us -->
+        <section id="callus">
+            <div class="container">
+                <div class="callus">
+                    <div class="text-callus">
+                        <br>
+                        <h1>HUBUNGI KAMI</h1>
+                        <br>
+                        <h3>Kami berkomitmen untuk selalu ada untuk anda, dimanapun dan kapanpun.<br>
+                            CS kami akan siap 24/7 untuk membantu anda.
+                        </h3>
+                    </div>
+                    <div class="button-callus">
+                        <a href="tel:0812-0888-1122" class="btn-callus">CALL US</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</main>
+    <br>
+    <br>
+	<footer class="footer">
+        <span class="footer-title">VEED Travel</span>
+        <p>Copyright ©2023 PT. VEED Abadi. All Rights Reserved.</p>
+      </footer>
+  
+</body>
+</html>
